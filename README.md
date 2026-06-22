@@ -19,6 +19,16 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+### Git LFS (for large files)
+
+This repo uses Git LFS to track model weights, data files, and images. Install it once:
+
+```bash
+git lfs install
+```
+
+LFS is configured automatically via `.gitattributes` — any `.pt`, `.pth`, `.onnx`, `.npy`, `.csv`, image files, etc. will be tracked by LFS on commit. No extra steps needed after the initial install.
+
 ## Running an experiment
 
 ```bash
