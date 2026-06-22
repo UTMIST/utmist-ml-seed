@@ -1,0 +1,4 @@
+name: cifar10
+path: ./data
+num_classes: 10
+augment: true

@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# ML artifacts
+outputs/
+data/
+*.pt
+*.pth
+*.onnx
+wandb/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# AI coding tools
+.claude/
+.cursor/
+.copilot/
+.aider*
+.continue/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Tooling
+.ruff_cache/
+.pytest_cache/
+.ipynb_checkpoints/

@@ -1,0 +1,5 @@
+# Template: implement build_custom_dataset() in src/data.py to use this config
+name: custom
+path: ./data/custom
+num_classes: null
+augment: false

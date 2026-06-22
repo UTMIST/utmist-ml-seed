@@ -1,0 +1,4 @@
+name: yolo_v8
+pretrained: true
+img_size: 640
+task: detect

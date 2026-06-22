@@ -1,0 +1,3 @@
+# Template: implement build_transformer() in src/models.py to use this config
+name: transformer
+num_classes: 10

@@ -1,0 +1,33 @@
+name: utmist-ml
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      # Core
+      - torch>=2.2
+      - torchvision>=0.17
+      - hydra-core>=1.3
+      - omegaconf>=2.3
+      - numpy>=1.26
+      - pandas>=2.1
+      - matplotlib>=3.8
+      - tqdm>=4.66
+      # ML
+      - scikit-learn>=1.4
+      - scipy>=1.12
+      - seaborn>=0.13
+      - tensorboard>=2.15
+      - wandb>=0.16
+      # CV
+      - opencv-python>=4.9
+      - albumentations>=1.3
+      - ultralytics>=8.1
+      - Pillow>=10.2
+      - timm>=0.9
+      # Dev
+      - pytest>=8.0
+      - ruff>=0.3
