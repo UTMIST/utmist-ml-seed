@@ -71,8 +71,17 @@ utmist-ml-seed/
 ├── docker/
 │   ├── Dockerfile             # Optional GPU/server container
 │   └── docker-compose.yml
+├── data/                      # Datasets (gitignored, auto-downloaded)
+├── outputs/                   # Hydra run outputs (gitignored)
+├── checkpoints/               # Saved model weights (gitignored)
+├── results/
+│   ├── figures/               # Plots and visualizations
+│   ├── metrics/               # Exported metric summaries
+│   └── reports/               # Write-ups and analysis
+├── logs/                      # TensorBoard / W&B logs (gitignored)
 ├── tests/
 │   └── test_smoke.py
+├── CLAUDE.md                  # AI coding assistant context
 ├── pyproject.toml
 ├── requirements.txt
 ├── environment.yml

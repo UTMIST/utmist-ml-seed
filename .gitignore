@@ -12,12 +12,27 @@ venv/
 env/
 
 # ML artifacts
-outputs/
-data/
+outputs/*
+data/*
+checkpoints/*
+results/figures/*
+results/metrics/*
+results/reports/*
+logs/*
 *.pt
 *.pth
 *.onnx
 wandb/
+
+# Keep READMEs and .gitkeep in otherwise-ignored dirs
+!outputs/README.md
+!data/README.md
+!checkpoints/README.md
+!results/README.md
+!results/figures/.gitkeep
+!results/metrics/.gitkeep
+!results/reports/.gitkeep
+!logs/README.md
 
 # IDE
 .vscode/
