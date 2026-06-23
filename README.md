@@ -2,7 +2,59 @@
 
 A Hydra-driven experiment launcher for ML projects at the University of Toronto Machine Intelligence Student Team (UTMIST). Supports classification (ResNet) and detection (YOLO) out of the box, with a clean config system for adding new models and datasets.
 
-## Quickstart
+## Prerequisites
+
+### 1. Install Miniconda
+
+Download and install Miniconda (lightweight version of Anaconda):
+
+- **macOS (Apple Silicon):**
+  ```bash
+  curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh
+  bash Miniconda3-latest-MacOSX-arm64.sh
+  ```
+
+- **macOS (Intel):**
+  ```bash
+  curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
+  bash Miniconda3-latest-MacOSX-x86_64.sh
+  ```
+
+- **Linux:**
+  ```bash
+  curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+  bash Miniconda3-latest-Linux-x86_64.sh
+  ```
+
+- **Windows:**
+  Download the installer from https://docs.conda.io/en/latest/miniconda.html, run it, then open "Anaconda Prompt" from the Start menu.
+
+After installing, restart your terminal and verify:
+```bash
+conda --version
+```
+
+### 2. Install Git LFS
+
+This repo uses Git LFS for large files (model weights, datasets, images).
+
+- **macOS:** `brew install git-lfs`
+- **Ubuntu/Debian:** `sudo apt install git-lfs`
+- **Windows:** Download from https://git-lfs.github.com
+
+Then run once:
+```bash
+git lfs install
+```
+
+### 3. Clone the repo
+
+```bash
+git clone https://github.com/UTMIST/utmist-ml-seed.git
+cd utmist-ml-seed
+```
+
+## Setup
 
 ### Option A: Conda (recommended)
 
@@ -18,16 +70,6 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
-
-### Git LFS (for large files)
-
-This repo uses Git LFS to track model weights, data files, and images. Install it once:
-
-```bash
-git lfs install
-```
-
-LFS is configured automatically via `.gitattributes` — any `.pt`, `.pth`, `.onnx`, `.npy`, `.csv`, image files, etc. will be tracked by LFS on commit. No extra steps needed after the initial install.
 
 ## Running an experiment
 
