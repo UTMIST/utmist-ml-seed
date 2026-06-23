@@ -1,6 +1,6 @@
-name: Feature
-description: Propose a new feature or improvement
-labels: ["feature"]
+name: Story
+description: A user story or feature request
+labels: ["story"]
 body:
   - type: textarea
     id: description
