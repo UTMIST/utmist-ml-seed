@@ -22,31 +22,6 @@ body:
     validations:
       required: false
 
-  - type: dropdown
-    id: priority
-    attributes:
-      label: Priority
-      options:
-        - "High"
-        - "Medium"
-        - "Low"
-    validations:
-      required: false
-
-  - type: dropdown
-    id: story-points
-    attributes:
-      label: Story Points
-      description: Rough effort estimate.
-      options:
-        - "1 - Trivial"
-        - "2 - Small"
-        - "3 - Medium"
-        - "5 - Large"
-        - "8 - Very Large"
-    validations:
-      required: false
-
   - type: textarea
     id: additional-context
     attributes:
