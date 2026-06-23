@@ -17,6 +17,8 @@ body:
       description: How do we know this is done?
       value: |
         - [ ]
+        - [ ]
+        - [ ]
     validations:
       required: false
 
