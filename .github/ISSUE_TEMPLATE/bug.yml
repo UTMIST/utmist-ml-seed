@@ -1,0 +1,62 @@
+name: Bug Report
+description: Report something that's broken
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the bug and how to reproduce it.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What should have happened instead?
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How do we know this is fixed?
+      value: |
+        - [ ] Bug no longer reproducible
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - "High"
+        - "Medium"
+        - "Low"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: story-points
+    attributes:
+      label: Story Points
+      description: Rough effort estimate.
+      options:
+        - "1 - Trivial"
+        - "2 - Small"
+        - "3 - Medium"
+        - "5 - Large"
+        - "8 - Very Large"
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Logs, screenshots, environment details, etc.
+    validations:
+      required: false

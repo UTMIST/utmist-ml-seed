@@ -1,0 +1,54 @@
+name: Task
+description: A chore, refactor, or general to-do
+labels: ["task"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What needs to be done?
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How do we know this is done?
+      value: |
+        - [ ]
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - "High"
+        - "Medium"
+        - "Low"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: story-points
+    attributes:
+      label: Story Points
+      description: Rough effort estimate.
+      options:
+        - "1 - Trivial"
+        - "2 - Small"
+        - "3 - Medium"
+        - "5 - Large"
+        - "8 - Very Large"
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Links, references, etc.
+    validations:
+      required: false

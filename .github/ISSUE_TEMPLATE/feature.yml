@@ -1,0 +1,54 @@
+name: Feature
+description: Propose a new feature or improvement
+labels: ["feature"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What do you want to add or change?
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How do we know this is done?
+      value: |
+        - [ ]
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - "High"
+        - "Medium"
+        - "Low"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: story-points
+    attributes:
+      label: Story Points
+      description: Rough effort estimate.
+      options:
+        - "1 - Trivial"
+        - "2 - Small"
+        - "3 - Medium"
+        - "5 - Large"
+        - "8 - Very Large"
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Links, screenshots, references, etc.
+    validations:
+      required: false
