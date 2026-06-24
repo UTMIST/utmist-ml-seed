@@ -22,6 +22,9 @@ ultralytics>=8.1
 Pillow>=10.2
 timm>=0.9
 
+# Demo (optional)
+gradio>=4.0
+
 # Dev
 pytest>=8.0
 ruff>=0.3

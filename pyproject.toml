@@ -1,6 +1,6 @@
 [build-system]
 requires = ["setuptools>=68.0"]
-build-backend = "setuptools.backends._legacy:_Backend"
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "utmist-ml-seed"
@@ -33,12 +33,15 @@ cv = [
     "Pillow>=10.2",
     "timm>=0.9",
 ]
+demo = [
+    "gradio>=4.0",
+]
 dev = [
     "pytest>=8.0",
     "ruff>=0.3",
 ]
 all = [
-    "utmist-ml-seed[ml,cv,dev]",
+    "utmist-ml-seed[ml,cv,demo,dev]",
 ]
 
 [tool.ruff]

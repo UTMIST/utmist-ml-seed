@@ -116,6 +116,9 @@ utmist-ml-seed/
 │   ├── models.py              # Model registry
 │   ├── data.py                # Dataset + dataloaders
 │   └── utils.py               # Seeds, checkpoints, device
+├── app/
+│   ├── app.py                 # Gradio demo (optional)
+│   └── README.md
 ├── notebooks/
 │   └── exploration.ipynb      # Interactive walkthrough
 ├── colab/
@@ -203,6 +206,23 @@ This repo uses [Hydra](https://hydra.cc/) for configuration management. The key 
 - **Experiment configs** override any base values (use `+experiment=name` to apply)
 - **CLI overrides** take highest priority: `python src/train.py training.lr=0.01`
 - Every run saves a complete config snapshot to the output directory for reproducibility
+
+## Demo (optional)
+
+A [Gradio](https://www.gradio.app/) web interface for running inference on trained models. Install the extra dependency and launch:
+
+```bash
+pip install -e ".[demo]"
+python app/app.py
+```
+
+The demo loads a checkpoint from `checkpoints/best_model.pt`. After training, copy your best checkpoint there:
+
+```bash
+cp outputs/<date>/<time>/best_model.pt checkpoints/best_model.pt
+```
+
+See [app/README.md](app/README.md) for customization tips.
 
 ## Docker (optional)
 

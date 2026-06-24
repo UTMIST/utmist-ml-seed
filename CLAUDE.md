@@ -22,6 +22,9 @@ ruff check src/ tests/
 
 # Test
 pytest tests/ -v
+
+# Demo (optional — requires gradio)
+python app/app.py
 ```
 
 ## Architecture
