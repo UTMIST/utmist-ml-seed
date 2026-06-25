@@ -13,6 +13,7 @@ training:
 logging:
   log_interval: 10
   save_checkpoint: true
+  tensorboard: true
 
 project:
   name: utmist-ml-project

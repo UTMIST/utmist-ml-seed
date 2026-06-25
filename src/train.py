@@ -32,6 +32,13 @@ def main(cfg: DictConfig) -> None:
         _train_yolo(cfg, output_dir)
         return
 
+    writer = None
+    if cfg.logging.tensorboard:
+        from torch.utils.tensorboard import SummaryWriter
+
+        writer = SummaryWriter(log_dir=str(output_dir / "tensorboard"))
+        log.info(f"TensorBoard logging to {output_dir / 'tensorboard'}")
+
     model = build_model(cfg.model).to(device)
     train_ds, val_ds = build_dataset(cfg.dataset)
     train_loader, val_loader = build_dataloaders(train_ds, val_ds, cfg.training.batch_size)
@@ -60,10 +67,18 @@ def main(cfg: DictConfig) -> None:
             "val_acc": val_acc,
         })
 
+        if writer:
+            writer.add_scalars("loss", {"train": train_loss, "val": val_loss}, epoch)
+            writer.add_scalars("accuracy", {"train": train_acc, "val": val_acc}, epoch)
+            writer.add_scalar("lr", optimizer.param_groups[0]["lr"], epoch)
+
         if cfg.logging.save_checkpoint and val_acc > best_val_acc:
             best_val_acc = val_acc
             save_checkpoint(model, optimizer, epoch, output_dir / "best_model.pt")
             log.info(f"Saved best model (val_acc={val_acc:.4f})")
+
+    if writer:
+        writer.close()
 
     save_metrics(all_metrics, output_dir / "metrics.json")
     log.info(f"Training complete. Best val_acc: {best_val_acc:.4f}")

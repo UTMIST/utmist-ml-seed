@@ -17,6 +17,9 @@ python src/train.py +experiment=long_run
 # Evaluate checkpoint
 python src/evaluate.py checkpoint=path/to/best_model.pt
 
+# TensorBoard (view training progress)
+tensorboard --logdir outputs/
+
 # Lint
 ruff check src/ tests/
 

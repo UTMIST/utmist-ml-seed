@@ -89,6 +89,22 @@ python src/train.py +experiment=long_run
 
 Outputs (config snapshot, metrics, checkpoints) are saved automatically to `outputs/<date>/<time>/` by Hydra.
 
+## Monitor training with TensorBoard
+
+TensorBoard is enabled by default. After starting a training run, open a second terminal:
+
+```bash
+tensorboard --logdir outputs/
+```
+
+Then open http://localhost:6006 in your browser. It logs train/val loss, train/val accuracy, and learning rate per epoch. You can compare multiple runs side-by-side.
+
+To disable TensorBoard logging:
+
+```bash
+python src/train.py logging.tensorboard=false
+```
+
 ## Evaluate a checkpoint
 
 ```bash
