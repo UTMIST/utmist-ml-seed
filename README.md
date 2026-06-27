@@ -71,6 +71,55 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+## Installing new packages
+
+When you need a package that's not in the seed:
+
+### Conda
+
+```bash
+# Install the package into the active env
+conda install <package>
+# — or via pip inside conda —
+pip install <package>
+
+# After adding, update environment.yml so others get it too
+conda env export --from-history > environment.yml
+```
+
+If someone else updated `environment.yml`, sync your env:
+
+```bash
+conda env update -f environment.yml --prune
+```
+
+### pip (venv)
+
+```bash
+pip install <package>
+```
+
+Then add it to `requirements.txt` manually with a version pin (e.g. `package>=1.0`).
+
+### pyproject.toml
+
+For packages that belong in the seed permanently, add them to the appropriate section in `pyproject.toml`:
+
+- `dependencies` — core packages everyone needs
+- `[project.optional-dependencies]` sections:
+  - `ml` — machine learning tools (scikit-learn, tensorboard, etc.)
+  - `cv` — computer vision (ultralytics, albumentations, etc.)
+  - `demo` — Gradio web demo
+  - `dev` — testing and linting
+
+Install optional groups with:
+
+```bash
+pip install -e ".[ml]"       # just ML extras
+pip install -e ".[cv]"       # just CV extras
+pip install -e ".[all]"      # everything
+```
+
 ## Running an experiment
 
 ```bash

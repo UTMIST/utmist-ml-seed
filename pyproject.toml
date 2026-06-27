@@ -14,6 +14,7 @@ dependencies = [
     "omegaconf>=2.3",
     "numpy>=1.26",
     "pandas>=2.1",
+    "pyarrow>=15.0",
     "matplotlib>=3.8",
     "tqdm>=4.66",
 ]
@@ -25,6 +26,9 @@ ml = [
     "seaborn>=0.13",
     "tensorboard>=2.15",
     "wandb>=0.16",
+    "openpyxl>=3.1",
+    "h5py>=3.10",
+    "huggingface-hub>=0.21",
 ]
 cv = [
     "opencv-python>=4.9",
