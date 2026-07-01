@@ -15,24 +15,17 @@ env/
 outputs/*
 data/*
 checkpoints/*
-results/figures/*
-results/metrics/*
-results/reports/*
-logs/*
+results/*
+logs/
 *.pt
 *.pth
 *.onnx
 wandb/
 
-# Keep READMEs and .gitkeep in otherwise-ignored dirs
-!outputs/README.md
+# Keep READMEs in otherwise-ignored dirs
 !data/README.md
 !checkpoints/README.md
 !results/README.md
-!results/figures/.gitkeep
-!results/metrics/.gitkeep
-!results/reports/.gitkeep
-!logs/README.md
 
 # IDE
 .vscode/

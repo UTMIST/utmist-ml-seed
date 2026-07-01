@@ -25,15 +25,12 @@ ruff check src/ tests/
 
 # Test
 pytest tests/ -v
-
-# Demo (optional — requires gradio)
-python app/app.py
 ```
 
 ## Architecture
 
 - Single entry point: `src/train.py` (Hydra)
-- Config composition: `configs/config.yaml` -> model + dataset + experiment overrides
+- Config composition: `configs/config.yaml` → model + dataset + experiment overrides
 - Model registry: `src/models.py` — `build_model(cfg)` dispatches on `cfg.name`
 - Dataset registry: `src/data.py` — `build_dataset(cfg)` dispatches on `cfg.name`
 - YOLO uses ultralytics' built-in `.train()`, not the standard training loop
