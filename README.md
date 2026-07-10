@@ -114,6 +114,13 @@ python src/train.py +experiment=long_run   # apply a preset
 
 Hydra saves the full resolved config alongside every run for reproducibility.
 
+## Docs
+
+- [docs/research.md](docs/research.md) — research workflow: MLflow, multirun sweeps, reproducibility checklist
+- [docs/engineering.md](docs/engineering.md) — engineering workflow: locking configs, CI, inference
+- [docs/experiment-tracking.md](docs/experiment-tracking.md) — TensorBoard vs MLflow vs W&B
+- [docs/data.md](docs/data.md) — data formats, Parquet guide, adding custom datasets
+
 ## License
 
 MIT
