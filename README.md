@@ -120,6 +120,7 @@ Hydra saves the full resolved config alongside every run for reproducibility.
 - [docs/engineering.md](docs/engineering.md) — engineering workflow: locking configs, CI, inference
 - [docs/experiment-tracking.md](docs/experiment-tracking.md) — TensorBoard vs MLflow vs W&B
 - [docs/data.md](docs/data.md) — data formats, Parquet guide, adding custom datasets
+- [docs/contributing.md](docs/contributing.md) — branch naming, commit format, PR conventions
 
 ## License
 
