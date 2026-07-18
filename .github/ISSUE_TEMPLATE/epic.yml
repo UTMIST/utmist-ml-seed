@@ -1,0 +1,50 @@
+name: Epic
+description: A larger initiative broken down into stories (use GitHub sub-issues to link them)
+labels: ["epic"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is this epic trying to achieve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: goals
+    attributes:
+      label: Goals / Success Criteria
+      description: How do we know this epic is done?
+      value: |
+        - [ ]
+        - [ ]
+        - [ ]
+    validations:
+      required: false
+
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of Scope
+      description: What is explicitly not covered by this epic?
+    validations:
+      required: false
+
+  - type: textarea
+    id: sub-issues
+    attributes:
+      label: Stories
+      description: Add stories as sub-issues (use the "Create sub-issue" option in the sidebar); list them here too for a quick reference.
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Links, screenshots, references, etc.
+    validations:
+      required: false
