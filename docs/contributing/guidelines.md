@@ -2,7 +2,7 @@
 
 ## Workflow
 
-1. Pick an issue from the [Issues](../../issues) tab — assign it to yourself
+1. Pick an issue from the [Issues](../../../issues) tab — assign it to yourself
 2. Create a branch off `main` following the naming convention below
 3. Do the work — commit as you go
 4. Open a PR — link the issue, fill out the PR template

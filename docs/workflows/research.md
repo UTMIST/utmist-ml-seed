@@ -48,7 +48,7 @@ python src/train.py training.lr=0.001 logging.mlflow=true
 python src/train.py training.lr=0.0001 logging.mlflow=true
 ```
 
-All runs appear in the MLflow UI for comparison. See [experiment-tracking.md](experiment-tracking.md) for how to launch it.
+All runs appear in the MLflow UI for comparison. See [experiment tracking](../tracking/experiment-tracking.md) for how to launch it.
 
 For larger sweeps, use **Hydra multirun**:
 
@@ -72,7 +72,7 @@ For a result to be reproducible, also document:
 - [ ] Dataset version / download source (add to your dataset config as a comment)
 - [ ] Environment: `conda env export > environment_locked.yml`
 - [ ] Random seed explicitly set (`training.seed` in config)
-- [ ] Model weights shared to HuggingFace Hub (see [../checkpoints/README.md](../checkpoints/README.md))
+- [ ] Model weights shared to HuggingFace Hub (see [checkpoints/README.md](../../checkpoints/README.md))
 
 ## Running multiple seeds
 
@@ -92,6 +92,6 @@ python src/train.py --multirun training.seed=0,1,2,3,4
 
 ## Sharing results
 
-- **Model weights** → HuggingFace Hub (see [../checkpoints/README.md](../checkpoints/README.md))
+- **Model weights** → HuggingFace Hub (see [checkpoints/README.md](../../checkpoints/README.md))
 - **Plots and figures** → `results/` directory (gitignored by default; `git add -f` to commit specific ones)
 - **Experiment logs** → MLflow tracking server or exported CSV from the MLflow UI

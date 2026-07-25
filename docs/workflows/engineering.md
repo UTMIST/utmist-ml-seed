@@ -42,15 +42,15 @@ python src/train.py +experiment=production
 1. **Explore** — run a few experiments with different LRs/architectures to find what works
 2. **Lock** — commit your best experiment config to `configs/experiment/`
 3. **Train final model** — run with the locked config, save the checkpoint
-4. **Share weights** — push to HuggingFace Hub (see [../checkpoints/README.md](../checkpoints/README.md))
+4. **Share weights** — push to HuggingFace Hub (see [checkpoints/README.md](../../checkpoints/README.md))
 5. **Evaluate** — run `src/evaluate.py` and log the final metrics
 
 ## Adding your data pipeline
 
-Replace CIFAR-10 with your dataset (see README "Adding a dataset"). For engineering projects, data preprocessing is often the most important part — invest time here:
+Replace CIFAR-10 with your dataset (see [adding a dataset](../usage/adding-a-dataset.md)). For engineering projects, data preprocessing is often the most important part — invest time here:
 
 - Clean and validate inputs before training
-- Use Parquet for tabular data (see [data.md](data.md))
+- Use Parquet for tabular data (see [data formats](../data/formats.md))
 - Add a data validation step before your `build_dataset()` function
 
 ## CI / automated testing
