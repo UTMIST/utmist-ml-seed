@@ -74,6 +74,14 @@ For a result to be reproducible, also document:
 - [ ] Random seed explicitly set (`training.seed` in config)
 - [ ] Model weights shared to HuggingFace Hub (see [checkpoints/README.md](../../checkpoints/README.md))
 
+## Before you wrap up checklist
+
+- [ ] Baseline established — every result is compared against a known reference, not just against itself
+- [ ] All candidate models/architectures you set out to compare have been trained, not just the best-performing one
+- [ ] Ablations run for each variable you're claiming matters (e.g. augmentation on/off, backbone choice)
+- [ ] 3–5 seeds run per config, reporting mean ± std (see [running multiple seeds](#running-multiple-seeds))
+- [ ] Results written up with plots/tables in `results/` or a report
+
 ## Running multiple seeds
 
 To report robust results, run 3–5 seeds and report mean ± std:

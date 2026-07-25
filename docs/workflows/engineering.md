@@ -39,11 +39,11 @@ python src/train.py +experiment=production
 
 ## Typical workflow
 
-1. **Explore** — run a few experiments with different LRs/architectures to find what works
-2. **Lock** — commit your best experiment config to `configs/experiment/`
-3. **Train final model** — run with the locked config, save the checkpoint
-4. **Share weights** — push to HuggingFace Hub (see [checkpoints/README.md](../../checkpoints/README.md))
-5. **Evaluate** — run `src/evaluate.py` and log the final metrics
+- [ ] **Explore** — run a few experiments with different LRs/architectures to find what works
+- [ ] **Lock** — commit your best experiment config to `configs/experiment/`
+- [ ] **Train final model** — run with the locked config, save the checkpoint
+- [ ] **Share weights** — push to HuggingFace Hub (see [checkpoints/README.md](../../checkpoints/README.md))
+- [ ] **Evaluate** — run `src/evaluate.py` and log the final metrics
 
 ## Adding your data pipeline
 
@@ -71,6 +71,15 @@ The seed ships with a basic GitHub Actions CI that lints and runs smoke tests. F
       # Run a real 1-epoch training to catch pipeline regressions
       - run: python src/train.py training.epochs=1 training.device=cpu
 ```
+
+## Before you ship checklist
+
+- [ ] Baseline established (simple model or heuristic) to prove the deliverable beats "doing nothing"
+- [ ] Data validated (see [data formats](../data/formats.md))
+- [ ] Config locked in `configs/experiment/` — no untracked CLI overrides needed to reproduce the run
+- [ ] CI passing, including any integration test you added
+- [ ] Final checkpoint evaluated on a held-out test set with `src/evaluate.py`, and it beats the baseline
+- [ ] Weights shared to HuggingFace Hub (see [checkpoints/README.md](../../checkpoints/README.md))
 
 ## Inference
 

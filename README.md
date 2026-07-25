@@ -22,17 +22,14 @@ diagram if you have one — this section doesn't need to be exhaustive, just ori
 *Key metrics, plots, or demo links/screenshots. Even a rough number ("62% val accuracy
 as of Week 4") is more useful here than nothing.*
 
-## Team
+## UTMIST metadata
 
-*Team/project name, members, and roles.*
-
-## Term
-
-*Which term(s) this project was built in, e.g. Fall 2026 – Winter 2027.*
-
-## Status
-
-*Where things stand — exploring / MVP / in progress / complete — and what's next.*
+- **Team:** *project name, members, and roles*
+- **Term:** *which term(s) this project was built in, e.g. Fall 2026 – Winter 2027*
+- **Type:** (see [docs/workflows](docs/README.md#documentation))
+  - [ ] Engineering
+  - [ ] Research
+- **Status:** *exploring / MVP / in progress / complete — and what's next*
 
 ---
 
